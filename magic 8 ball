@@ -1,0 +1,26 @@
+#create an input would you like to shake the eightball
+import time
+import random
+#You dont really need the class for this, it is a simple function.
+def shake_me():
+    while True:  
+        play = input('Would you like to shake the eightball? Y or N   ')
+
+        if play.upper() == 'N' : 
+            print('Choose your own destiny, have a good day.')
+            break
+
+        elif play.upper() == 'Y':
+            print('Ask a question, and I will predict your destiny...')
+            time.sleep(7)
+            print('Consulting the spirits...')
+            time.sleep(3)
+            #insert random answer from list of answers
+            eight_ball_list = ['Anything is possible if you put in the effort','You never know until you try',\
+            'My sources say yes', 'Have you worked for it?', 'My intuition tells me no',\
+            'That is not in your future','Ask your father','Not likey']
+            print(random.choice(eight_ball_list))
+        else: 
+            print('Not a valid entry.')
+
+
